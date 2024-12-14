@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Acceso - Oi Seguridad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 0;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 500px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Solicitud de Acceso</h1>
+    </header>
+    <div class="container">
+    <!-- Formulario de solicitud -->
+    <form method="POST" action="/request_access">
+        <label for="ip">Dirección IP:</label>
+        <input type="text" id="ip" name="ip" placeholder="Ingrese su dirección IP" required>
+        
+        <label for="comment">Comentario (opcional):</label>
+        <textarea id="comment" name="comment" placeholder="Añadir un comentario"></textarea>
+        
+        <button type="submit">Enviar Solicitud</button>
+    </form>
+
+    <!-- Consulta de estado -->
+    <h2>Consulta el estado de tu solicitud</h2>
+    <form method="POST" action="/check_status">
+        <label for="check_ip">Dirección IP:</label>
+        <input type="text" id="check_ip" name="ip" placeholder="Ingrese su dirección IP" required>
+        
+        <button type="submit">Consultar Estado</button>
+    </form>
+</div>
+<a href="/" class="btn">Volver a Inicio</a>
+</body>
+</html>
+

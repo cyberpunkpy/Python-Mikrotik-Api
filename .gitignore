@@ -1,0 +1,12 @@
+# Ignorar archivos de base de datos
+*.db
+*.sqlite3
+
+# Ignorar archivos de configuración sensibles
+.env
+*.log
+
+# Ignorar archivos específicos del entorno virtual
+venv/
+__pycache__/
+*.pyc
